@@ -1,7 +1,7 @@
 ## 交作業流程
 
 1. 首先，先在 terminal 開啟 mentor-program-3rd-rkrshen 資料夾。
-`git cd mentor-program-3rd-rkrshen`
+`cd mentor-program-3rd-rkrshen`
 
 2. 在 master 新增一個 branch （以 week1 為例）並切換至新的 branch。
 `git branch week1`
