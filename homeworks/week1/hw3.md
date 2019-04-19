@@ -31,9 +31,9 @@ CLI (Command Line Interface) 是透過輸入文字的方式對電腦下指令，
 
 ##### 資料夾切換
 ```
-#切換至 hello 資料夾
-1. $cd hello (相對路徑)
-2. $cd /User/rkrs/hello (絕對路徑)
+#切換至 wifi 資料夾
+1. $cd wifi (相對路徑)
+2. $cd /User/rkrs/wifi (絕對路徑)
 
 #切換至上一層資料夾
 $cd ..
@@ -41,50 +41,50 @@ $cd ..
 #切換至 home 資料夾
 $cd ~
 
-#切換至 home 資料夾裡的 hello 資料夾
-$cd ~/hello
+#切換至 home 資料夾裡的 wifi 資料夾
+$cd ~/wifi
 ```
 
 ##### 建立檔案
 ```
-#建立一個 hello.txt 檔案
-$touch hello.txt
+#建立一個 afu.js 檔案
+$touch afu.js
 
-如果 hello.txt 已經存在，則會更改最後修改時間
+如果 afu.js 已經存在，則會更改最後修改時間
 ```
 
 ##### 複製檔案
 ```
-#複製一份 hello.txt 成 hi.txt
-$cp hello.txt hi.txt
+#複製一份 afu.js 成 hello.js
+$cp afu.js hello.js
 
-#複製一個 hello 資料夾成 hi 資料夾
-$cp -r hello hi 
+#複製一個 wifi 資料夾成 hello 資料夾
+$cp -r wifi hello
 
 增加 -r 參數，即使發現錯誤也會強制執行複製 
 ```
 
 ##### 移動檔案或更名
 ```
-#將 hello.txt 移動至 code 資料夾裡
-$mv hello.txt code
+#將 afu.js 移動至 wifi 資料夾裡
+$mv afu.js wifi
 
-#將 hello.txt 重新命名成 hi.txt
-$mv hello.txt hi.txt
+#將 afu.js 重新命名成 hello.js
+$mv afu.js hello.js
 ```
 
 ##### 刪除檔案
 ```
-#刪除 hello.txt
-$rm hello.txt
+#刪除 afu.js
+$rm afu.js
 
-#刪除 hello 資料夾
-$rmdir hello
+#刪除 wifi 資料夾
+$rmdir wifi
 或是
-$rm -r hello
+$rm -r wifi
 
-#刪除這個資料夾裡所有的 .txt 檔案
-$rm *.txt
+#刪除這個資料夾裡所有的 .js 檔案
+$rm *.js
 ```
 
 ##### 列出檔案詳細資料
