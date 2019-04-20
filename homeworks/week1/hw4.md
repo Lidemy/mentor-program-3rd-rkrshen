@@ -61,10 +61,10 @@
 只要按照這樣的原則，要跟別人一起建構笑話就變得相當容易，相當好管理。另外，偷偷告訴你，其實我使用的 vscode 裡面就有內建 git 管理工具，可用圖形介面操作常用指令，也是很方便喔。但還是建議先熟練這些指令操作啦...
 
 這些實用網站提供給你參考，祝你笑話事業一飛沖天！
-[Git 超新手入門](https://www.lidemy.com/courses/enrolled/379441)
-[連猴子都懂得Git入門指南](https://backlog.com/git-tutorial/tw/)
-[Git Cheatsheet正體中文版](http://scars377.github.io/git-cheatsheet-cht/)
-[Git官方的教學文件](https://git-scm.com/book/zh-tw/v2)
-[線上分支學習網站](https://learngitbranching.js.org/)
-[Awesome Git中文版](https://github.com/hylerrix/awesome-git)
+* [Git 超新手入門](https://www.lidemy.com/courses/enrolled/379441)
+* [連猴子都懂得Git入門指南](https://backlog.com/git-tutorial/tw/)
+* [Git Cheatsheet正體中文版](http://scars377.github.io/git-cheatsheet-cht/)
+* [Git官方的教學文件](https://git-scm.com/book/zh-tw/v2)
+* [線上分支學習網站](https://learngitbranching.js.org/)
+* [Awesome Git中文版](https://github.com/hylerrix/awesome-git)
 
