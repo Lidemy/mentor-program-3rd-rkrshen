@@ -1,14 +1,14 @@
 function join(arr, concatStr) {
-  let newArr = [];
+  let newStr = '';
   for (let i = 0; i < (arr.length - 1); i += 1) {
-    newArr += arr[i] + concatStr;
+    newStr += arr[i] + concatStr;
   }
   if (arr.length <= 1) {
-    newArr += arr[arr.length - 1] + concatStr;
+    newStr += arr[arr.length - 1] + concatStr;
   } else {
-    newArr += arr[arr.length - 1];
+    newStr += arr[arr.length - 1];
   }
-  return newArr;
+  return newStr;
 }
 
 function repeat(str, times) {
