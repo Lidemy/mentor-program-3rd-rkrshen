@@ -26,7 +26,7 @@ function add(a, b) {
     count = numA[i] + numB[i];
     if (count > 9) {
       sum[i] = count - 10;
-      sum[i + 1] += 1;
+      numA[i + 1] += 1;
     } else {
       sum[i] = count;
     }
@@ -37,5 +37,5 @@ function add(a, b) {
   }
   return sum.join('');
 }
-
+console.log(add('11111', '987654321'));
 module.exports = add;
