@@ -10,10 +10,9 @@ if (process.argv[2] === 'list') {
     }
   });
 } else if (process.argv[2] === 'read') {
-  request('https://lidemy-book-store.herokuapp.com/books', (error, status, body) => {
+  request(`https://lidemy-book-store.herokuapp.com/books/${num}`, (error, status, body) => {
     const ans = JSON.parse(body);
-    const no = process.argv[3] - 1;
-    console.log(ans[no].id, ans[no].name);
+    console.log(ans.id, ans.name);
   });
 } else if (process.argv[2] === 'delete') {
   request.delete(`https://lidemy-book-store.herokuapp.com/books/${num}`);
