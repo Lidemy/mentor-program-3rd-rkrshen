@@ -1,10 +1,7 @@
 ## 請找出三個課程裡面沒提到的 HTML 標籤並一一說明作用。
-1. <canvas />
-定義圖形，比如圖表和其他圖像,標籤只是圖形容器，必须使用 script 來繪製圖形。
-2. <noscript />
-用来定義在 script 未被執行時的替代内容。
-3. <video />
-定義視訊內容，目前支援 MP4、WebM、Ogg 等三種格式。
+1. <canvas /> 定義圖形，比如圖表和其他圖像,標籤只是圖形容器，必须使用 script 來繪製圖形。
+2. <noscript /> 用来定義在 script 未被執行時的替代内容。
+3. <video /> 定義視訊內容，目前支援 MP4、WebM、Ogg 等三種格式。
 
 ## 請問什麼是盒模型（box modal）
 是 html 元素的空間定位模型，會把每一個元素分成 content(內容本身大小), padding(往內擠壓的空間), margin(往外擴充的空間), border(邊框)。其中，使用 box-sizing 可以讓 border 算進 padding 空間裡面，就不影響外面的排版。
