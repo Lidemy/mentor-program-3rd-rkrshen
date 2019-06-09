@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>week7 hw2</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <style>
+    html, body {
+      font-family: 'Roboto', Helvetica, sans-serif;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0; 
+      background-color: #f8ede6;
+    }
+    .banner {
+      width: 100%;
+      height: 275px;
+      margin-top: 0;
+      background: url("./backgroundImg.jpg") no-repeat center;
+      background-size: cover; 
+    }
+    .form {
+      position: relative;
+      margin: auto;
+      top: -80px;
+      max-width: 40em;
+      display: flex;
+      flex-wrap: wrap;
+      background: white;
+      border-top: 7px solid orange; 
+      padding: 10px;
+      box-shadow: 0px 1px 8px -4px;
+    }
+    .form__header, .form__body {
+      max-width: 640px; 
+    }
+    .form__title, .form__detail {
+      padding: 0 30px;
+    }
+    .form__title {
+      font-size: 34px;
+      font-weight: normal;
+      padding-bottom: 0; 
+    }
+    .form__detail {
+      font-size: 13px;
+      padding: 0 30px;
+      line-height:24px;
+    }
+    .form__content {
+      padding: 0px 30px;
+      margin-bottom: 30px;
+    }
+    .reminder {
+      margin-top: 5px;
+      color: white; 
+    }
+    .form__detail p:nth-of-type(2) {
+      font-size: 13px; 
+    }
+    a {
+      color: #0428cc; 
+    }
+    .required {
+      color: #ea3535; 
+    }
+    .form__input {
+      font-size: 20px;
+    }
+    p {
+      margin-top: 3px;
+      font-size: 13px; 
+    }
+    input[type="text"], #email {
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      width: 60%;
+      height: 1.3rem;
+      font-size: 16px;
+    }
+    input:focus {
+      border-bottom: 3px solid #ba4708;
+    }
+    #submit {
+      background: #155ded;
+      color: #f8f8f8;
+      width: 90px;
+      height: 40px;
+      border: none;
+      border-radius: 5px; 
+    }
+    #submit:hover {
+      cursor: pointer; 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner"></div>
+    <form class="form" onsubmit="return result()">
+      <div class="form__header">
+        <h1 class="form__title">程式導師實驗計畫第三期報名表單</h1>
+        <div class="form__detail">
+          <p>詳情請參考：
+            <a href="https://medium.com/hulis-blog/mentor-program-3rd-47a2e85e33b3">https://medium.com/hulis-blog/mentor-program-3rd-47a2e85e33b3</a>
+            <br> 填完之後請務必按照文章內的說明再寄信給我，才算報名成功喔
+          </p>
+          <p class="required">*必填</p>
+        </div>
+      </div>
+      <div class="form__body">
+        <div class="form__content form__email">
+          <div class="form__input">電子郵件地址
+            <font color="#D70000">*</font>
+          </div>
+          <br>
+          <input name="email" id="email" type="email" placeholder="你的電子郵件">
+          <div class="reminder" id="reminder1">這是必填問題</div>
+        </div>
+        <div class="form__content form__name">
+          <div class="form__input">暱稱
+            <font color="#D70000">*</font>
+            <p class="eg">該如何稱呼你</p>
+          </div>
+          <input name="name" id="name" type="text" placeholder="您的回答">
+          <div class="reminder" id="reminder2">這是必填問題</div>
+        </div>
+        <div class="form__content form__type">
+          <div class="form__input">報名類型
+            <font color="#D70000">*</font>
+          </div>
+          <br>
+          <input name="type" id="junior" type="radio" value="junior">
+          <label for="type"> 從零到一基礎班（兩個月後開始收保證金 5000，淘汰不退還，結業後兩個月內找到工作付一個月半薪水，沒工作不用付）</label>
+          <br>
+          <br>
+          <input name="type" id="senior" type="radio" value="senior">
+          <label for="type"> 在職工程師加強班（兩個月後開始收保證金 5000，三個月時收學費 35000 元台幣，被淘汰不退還）</label>
+          <div class="reminder" id="reminder3">這是必填問題</div>
+        </div>
+        <div class="form__content form__career">
+          <div class="form__input">現在的職業
+            <font color="#D70000">*</font>
+            <p class="eg">範例：學生、前端工程師、待業中、業務</p>
+          </div>
+          <input name="career" id="career" type="text" placeholder="您的回答">
+          <div class="reminder" id="reminder4">這是必填問題</div>
+        </div>
+        <div class="form__content form__path">
+          <div class="form__input">怎麼知道這個計畫的？
+            <font color="#D70000">*</font>
+            <br>
+            <br>
+          </div>
+          <input name="path" id="path" type="text" placeholder="您的回答">
+          <div class="reminder" id="reminder5">這是必填問題</div>
+        </div>
+        <div class="form__content form__exp">
+          <div class="form__input">是否有程式相關背景？
+            <font color="#D70000">*</font>
+            <p class="eg">範例：無、高中時候學過C++、學過一點網頁前端、目前在資策會上課...</p>
+          </div>
+          <input name="exp" id="exp" type="text" placeholder="您的回答">
+          <div class="reminder" id="reminder6">這是必填問題</div>
+        </div>
+        <div class="form__content">
+          <div class="form__input">其他
+            <br>
+            <p class="eg">任何你想說的</p>
+          </div>
+          <input name="other" id="other" type="text" placeholder="您的回答">
+        </div>
+        <div class="form__content">
+          <button name="submit" id="submit" type="submit">提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript">
+    function result() {
+      let email = document.getElementById('email');
+      let name = document.getElementById('name');
+      let junior = document.getElementById('junior');
+      let senior = document.getElementById('senior');
+      let career = document.getElementById('career');
+      let path = document.getElementById('path');
+      let exp = document.getElementById('exp');
+      let other = document.getElementById('other');
+
+      if (email.value === '') {
+        document.querySelector('.form__email').style.background = '#ffd6d6';
+        email.style.background = '#ffd6d6';
+        email.style.borderBottom = '1px solid #ea3535';
+        document.getElementById('reminder1').style.color = '#ea3535';
+        return false;
+      } else if (name.value === '') {
+        document.querySelector('.form__name').style.background = '#ffd6d6';
+        name.style.background = '#ffd6d6';
+        name.style.borderBottom = '1px solid #ea3535';
+        document.getElementById('reminder2').style.color = '#ea3535';
+        return false;
+      } else if (!junior.checked && !senior.checked) {
+        document.querySelector('.form__type').style.background = '#ffd6d6';
+        document.getElementById('reminder3').style.color = '#ea3535';
+        return false;
+      } else if (career.value === '') {
+        document.querySelector('.form__career').style.background = '#ffd6d6';
+        career.style.background = '#ffd6d6';
+        career.style.borderBottom = '1px solid #ea3535';
+        document.getElementById('reminder4').style.color = '#ea3535';
+        return false;
+      } else if (path.value === '') {
+        document.querySelector('.form__path').style.background = '#ffd6d6';
+        path.style.background = '#ffd6d6';
+        path.style.borderBottom = '1px solid #ea3535';
+        document.getElementById('reminder5').style.color = '#ea3535';
+        return false; 
+      } else if (exp.value === '') {
+        document.querySelector('.form__exp').style.background = '#ffd6d6';
+        exp.style.background = '#ffd6d6';
+        exp.style.borderBottom = '1px solid #ea3535';
+        document.getElementById('reminder6').style.color = '#ea3535';
+        return false;
+      } else {
+        console.log(email.value);
+        console.log(name.value);
+        console.log('junior: ' + junior.checked);
+        console.log('senior: ' + senior.checked);
+        console.log(career.value);
+        console.log(path.value);
+        console.log(exp.value);
+        console.log(other.value);
+        alert('表單已成功送出!');
+        return true;
+      }
+    }  
+  </script>
+</body>
+
+</html>

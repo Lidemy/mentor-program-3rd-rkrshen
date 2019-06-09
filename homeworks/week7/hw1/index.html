@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>week7 hw1</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .turn{
+      background-color: #ffcd63;
+    }
+    .wrap{
+      height: 100vh;
+    }
+    h2{
+      font-family: Helvetica, sans-serif;
+      color:#963501;
+      padding-top:300px;
+      text-align: center;
+    }
+    button{
+      border: 0px;
+      height: 40px;
+      width: 100px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      background-color: #e5841d;
+      color:#ffffff;
+      text-align: center;
+      display:block;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h2>畫面變色時請點擊</h2>
+  </div>
+  <script>
+    const start = new Date();
+      const myVar = setTimeout(() => { document.querySelector('body').classList.add('turn'); }, 2000);
+      function count() {
+        const end = new Date();
+        const len = (end.getTime() - start.getTime()) / 1000;
+        if (len - 2 < 0) {
+          alert('還沒變色哦，失敗');
+          clearTimeout(myVar);
+        } else if (len > 0) {
+          alert(`你的成績：${len - 2}秒`);
+        }
+        const again = document.createElement('button');
+        again.innerText = '再試一次';
+        document.querySelector('h2').appendChild(again);
+        document.querySelector('button').addEventListener('click',
+          () => {
+            document.location.reload();
+          });
+        document.querySelector('body').removeEventListener('click', count, false);
+      }
+      document.querySelector('body').addEventListener('click', count, false);
+  </script>
+</body>
+
+</html>
